@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aarya Patel | Future Computer Scientist & AI Enthusiast</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Color palette */
+      --color-bg: #0f0e17;
+      --color-primary: #7209b7;
+      --color-secondary: #4361ee;
+      --color-accent: #4cc9f0;
+      --color-neon: #b5179e;
+      --color-text: #ffffff;
+      --color-text-secondary: #a7a9be;
+      
+      /* Font variables */
+      --font-primary: 'Outfit', sans-serif;
+      --font-secondary: 'Space Grotesk', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: var(--font-secondary);
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, var(--color-primary), var(--color-accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    h2 {
+      font-family: var(--font-secondary);
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      color: var(--color-accent);
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin-bottom: 2rem;
+      color: var(--color-text-secondary);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-neon));
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      box-shadow: 0 4px 15px rgba(114, 9, 183, 0.4);
+      transition: all 0.3s ease;
+      margin: 0 1rem;
+    }
+
+    .button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(114, 9, 183, 0.6);
+    }
+
+    .secondary-button {
+      background: transparent;
+      border: 2px solid var(--color-primary);
+    }
+
+    .secondary-button:hover {
+      background: rgba(114, 9, 183, 0.1);
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(60px);
+    }
+
+    .circle-1 {
+      width: 300px;
+      height: 300px;
+      background: var(--color-primary);
+      top: 20%;
+      right: 10%;
+      opacity: 0.3;
+    }
+
+    .circle-2 {
+      width: 200px;
+      height: 200px;
+      background: var(--color-secondary);
+      bottom: 10%;
+      left: 15%;
+      opacity: 0.2;
+    }
+
+    .circle-3 {
+      width: 150px;
+      height: 150px;
+      background: var(--color-accent);
+      top: 40%;
+      left: 10%;
+      opacity: 0.2;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+      
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+      
+      .button {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="circle circle-1"></div>
+  <div class="circle circle-2"></div>
+  <div class="circle circle-3"></div>
+
+  <main>
+    <h1>Aarya Patel</h1>
+    <h2>Future Computer Scientist & AI Enthusiast</h2>
+    <p>
+      Homestead High School student (Class of 2027) with a passion for artificial intelligence and technology.
+      This portfolio showcases my journey, skills, and projects in the world of computer science.
+    </p>
+    <div class="buttons">
+      <a href="https://github.com/aaryapatel09/aaryas_website" target="_blank" class="button">View Source</a>
+      <a href="mailto:aarya.patel@example.com" class="button secondary-button">Contact Me</a>
+    </div>
+  </main>
+
+  <script>
+    // Simple animation for the circles
+    function animateCircles() {
+      const circles = document.querySelectorAll('.circle');
+      
+      circles.forEach((circle, index) => {
+        setInterval(() => {
+          const randomX = Math.random() * 20 - 10;
+          const randomY = Math.random() * 20 - 10;
+          
+          circle.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        }, 2000 + (index * 500));
+        
+        circle.style.transition = 'transform 2s ease-in-out';
+      });
+    }
+    
+    document.addEventListener('DOMContentLoaded', animateCircles);
+  </script>
+</body>
+</html> 
